@@ -1,12 +1,12 @@
-import { SelectablePage } from "../pageObjects/SelectablePage.js";
+import { SelectablePage } from "../pageObjects/SelectablePage";
 
-describe("MD1 scenario", () => {
+describe("MD1 Scenario", () => {
   context("Selectable", () => {
     beforeEach(() => {
       SelectablePage.visit();
     });
 
-    it("Selectable Test", () => {
+    it("Grid", () => {
       SelectablePage.gridButton.click();
       SelectablePage.listNumber.contains("Two").click();
       SelectablePage.listNumber.contains("Four").click();
@@ -22,6 +22,5 @@ describe("MD1 scenario", () => {
       SelectablePage.listNumber.should("contain.text", "Seven")
       SelectablePage.listNumber.should("contain.text", "Nine")
     });
-
   });
 });

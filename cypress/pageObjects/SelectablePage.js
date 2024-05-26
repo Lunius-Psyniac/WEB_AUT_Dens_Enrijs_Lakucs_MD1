@@ -1,10 +1,9 @@
-import { BasePage } from "../pageObjects/basePage";
+import { BasePage } from "../pageObjects/BasePage";
 
-export class HomePage extends BasePage {
+export class SelectablePage extends BasePage {
   static get url() {
-    return "/#/selectable";
+    return "/selectable";
   }
-
    static get gridButton() {
     return cy.get("[id='demo-tab-grid']");
    }
